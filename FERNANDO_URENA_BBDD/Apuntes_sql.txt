@@ -1,0 +1,47 @@
+CREAR  Y BORRAR BASE DE DATOS:
+create database "nombre";
+drop database "nombre ";
+
+CREACINO DE TABLAS
+createtable "nombre"(
+nif varcahr(),
+nombre varcahr(),
+apellidos();
+
+TABLAS CON CLAVE PRIMARIA
+primary key (nif_vendedor,fecha_venta));
+
+BORRAR TABLAS
+drop table "nombre";
+
+RENOMBRAR TABLAS
+rename table "nombre" to "nombre_nuevo";
+alter table "nombre" rename "nombre_nuevo";
+
+ELIMINAR 'N' CAMPOS EXISTENTES
+
+alter table "nombre" drop "nombre_columna",drop "otro_nombre_columna";
+
+AÑADIR CAMPOS
+// una vez creada la tabla y deseamos agregar mas campos.
+alter table "nombre" add "column num_unidades integer" after fecha_venta,
+add "column_nombre integer" after "importe_tot";
+//la queremos agregar al principio de la tabla
+alter table "nombre_tabla" add "nombre_columna varchar()" first;
+
+RENOMBRAR CAMPOS
+
+PARA VER EXCEPCIONES
+CUYO CODIGO DE COMUNIDAD NO ESTE EN LA TABLA 
+
+where "nombre de tabla" not in (select  "cod_comunidad from "comunidades")
+
+FOREING KEY
+constraint "nombre de foreing key";
+foreing key "nombre_ campo_tabla";
+references "nomre"(columna);
+ 
+
+
+
+

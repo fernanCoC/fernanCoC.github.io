@@ -1,0 +1,27 @@
+create table personas(nif varchar(9) primary key, 
+nombre varchar(20) not null,
+apellido varchar(40) not null,
+edad int check (edad>18),
+ventas int default 0); 
+insert into personas values('12A','juan','Martin',20);
+insert into personas(nomre, nif, apellidos) values ('12A','juan','Martin',20);
+insert into personas(nif, nombre, apellidos) values ('12A','Juan','Maartin');
+insert into paises values('999','Negroland','01',null,load_file('C:\Users\Usuario\Desktop\Negreira.jpg'));
+
+Modificar un solo aspecto= alter table (nombre del fichero) change (bander) to (bandera); 
+DML de manejo de datos, sentencia DML 
+--------------------------------/////-----------------------------------------------////------------------------------------
+Para meter foteles:
+insert into paises values('996','otro pais','01',null, load_file('C:/ProgramData/MySQL/MySQL Server 8.0/uploads/Negreira.jpg'));
+
+----------------------------------////-----------------------------------------------------////--------------------------------
+Para borrar:
+drop databases paises
+
+añadir: alter table paises	  
+	add constraint clave_ajena_1 
+	foreign key (cod_continente) 	
+	references continente (cod_continente);
+
+
+
